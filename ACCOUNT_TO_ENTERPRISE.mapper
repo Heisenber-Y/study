@@ -1,0 +1,127 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "ACCOUNTNOMAIN",
+			"primaryKey": "ACCOUNTNOID",
+			"properties": {
+				"ACCOUNTNOID": {
+					"index":  0
+				},
+				"REGISTNO": {
+					"index":  1
+				},
+				"SUMPAID": {
+					"index":  2
+				},
+				"ACCOUNTNO": {
+					"index":  3
+				},
+				"PAYEEMOBILE": {
+					"index":  4
+				},
+				"PAYEEBANKACCOUNTNAME": {
+					"index":  5
+				},
+				"PAYEE": {
+					"index":  6
+				},
+				"PAIDMETHODCODE": {
+					"index":  7
+				},
+				"PAYEETYPE": {
+					"index":  8
+				},
+				"ETL_DATE": {
+					"index":  9
+				},
+				"KIND": {
+					"index":  10
+				},
+				"LAST_MARKER": {
+					"index":  11
+				},
+				"MARKED_STATUS": {
+					"index":  12
+				},
+				"MARKED_TAG": {
+					"index":  13
+				},
+				"LAST_MARKED_TIME": {
+					"index":  14
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "ENTERPRISEMAIN",
+			"primaryKey": "ENTERPRISEID",
+			"properties": {
+				"ENTERPRISEID": {
+					"index":  15
+				},
+				"REGISTNO": {
+					"index":  16
+				},
+				"ENTERPRISE_KIND_NAME": {
+					"index":  17
+				},
+				"ENTERPRISE_NAME": {
+					"index":  18
+				},
+				"ENTERPRISE_KIND_CODE": {
+					"index":  19
+				},
+				"ENTERPRISE_CODE": {
+					"index":  20
+				},
+				"ENTERPRISE_LEVEL": {
+					"index":  21
+				},
+				"PHONE": {
+					"index":  22
+				},
+				"KIND": {
+					"index":  23
+				},
+				"ETL_DATE": {
+					"index":  24
+				},
+				"LAST_MARKER": {
+					"index":  25
+				},
+				"MARKED_STATUS": {
+					"index":  26
+				},
+				"MARKED_TAG": {
+					"index":  27
+				},
+				"LAST_MARKED_TIME": {
+					"index":  28
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  29
+		},
+		"properties": {
+				"SRCID": {
+					"index":  30
+				},
+				"DESID": {
+					"index":  31
+				}
+
+		}
+	}
+
+    ]
+}
