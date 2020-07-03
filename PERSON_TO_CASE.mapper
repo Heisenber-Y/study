@@ -1,0 +1,133 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "PERSONMAIN",
+			"primaryKey": "PERSONID",
+			"properties": {
+				"PERSONID": {
+					"index":  0
+				},
+				"POLICYNO": {
+					"index":  1
+				},
+				"USERNAME": {
+					"index":  2
+				},
+				"IDENTIFYTYPE": {
+					"index":  3
+				},
+				"IDENTIFYNUMBER": {
+					"index":  4
+				},
+				"TEL": {
+					"index":  5
+				},
+				"KIND": {
+					"index":  6
+				},
+				"ETL_DATE": {
+					"index":  7
+				},
+				"LAST_MARKER": {
+					"index":  8
+				},
+				"MARKED_STATUS": {
+					"index":  9
+				},
+				"MARKED_TAG": {
+					"index":  10
+				},
+				"LAST_MARKED_TIME": {
+					"index":  11
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "CLAIMMAIN",
+			"primaryKey": "CASEID",
+			"properties": {
+				"CASEID": {
+					"index":  12
+				},
+				"REGISTNO": {
+					"index":  13
+				},
+				"INITDAMAGEDATE": {
+					"index":  14
+				},
+				"REPORTDATE": {
+					"index":  15
+				},
+				"OPENDATE": {
+					"index":  16
+				},
+				"ENDCASEDATE": {
+					"index":  17
+				},
+				"ACCEPTDATE": {
+					"index":  18
+				},
+				"SUMPAID": {
+					"index":  19
+				},
+				"COMPANY": {
+					"index":  20
+				},
+				"POLICYNO": {
+					"index":  21
+				},
+				"COMPANYCODE": {
+					"index":  22
+				},
+				"PHONENUMBER": {
+					"index":  23
+				},
+				"REPORTORPHONENUMBER": {
+					"index":  24
+				},
+				"ETL_DATE": {
+					"index":  25
+				},
+				"DAMAGEADDRESS": {
+					"index":  26
+				},
+				"LAST_MARKER": {
+					"index":  27
+				},
+				"MARKED_STATUS": {
+					"index":  28
+				},
+				"MARKED_TAG": {
+					"index":  29
+				},
+				"LAST_MARKED_TIME": {
+					"index":  30
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  31
+		},
+		"properties": {
+				"SRCID": {
+					"index":  32
+				},
+				"DESID": {
+					"index":  33
+				}
+
+		}
+	}
+
+    ]
+}
