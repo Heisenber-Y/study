@@ -1,0 +1,142 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "CLAIMMAIN",
+			"primaryKey": "CASEID",
+			"properties": {
+				"CASEID": {
+					"index":  0
+				},
+				"REGISTNO": {
+					"index":  1
+				},
+				"INITDAMAGEDATE": {
+					"index":  2
+				},
+				"REPORTDATE": {
+					"index":  3
+				},
+				"OPENDATE": {
+					"index":  4
+				},
+				"ENDCASEDATE": {
+					"index":  5
+				},
+				"ACCEPTDATE": {
+					"index":  6
+				},
+				"SUMPAID": {
+					"index":  7
+				},
+				"COMPANY": {
+					"index":  8
+				},
+				"POLICYNO": {
+					"index":  9
+				},
+				"COMPANYCODE": {
+					"index":  10
+				},
+				"PHONENUMBER": {
+					"index":  11
+				},
+				"REPORTORPHONENUMBER": {
+					"index":  12
+				},
+				"ETL_DATE": {
+					"index":  13
+				},
+				"DAMAGEADDRESS": {
+					"index":  14
+				},
+				"LAST_MARKER": {
+					"index":  15
+				},
+				"MARKED_STATUS": {
+					"index":  16
+				},
+				"MARKED_TAG": {
+					"index":  17
+				},
+				"LAST_MARKED_TIME": {
+					"index":  18
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "VEHICLEMAIN",
+			"primaryKey": "VEHICLEID",
+			"properties": {
+				"VEHICLEID": {
+					"index":  19
+				},
+				"REGISTNO": {
+					"index":  20
+				},
+				"DRIVERNAME": {
+					"index":  21
+				},
+				"DRIVERCERTITYPE": {
+					"index":  22
+				},
+				"DRIVERCERTINO": {
+					"index":  23
+				},
+				"FRAMENO": {
+					"index":  24
+				},
+				"ENGINENO": {
+					"index":  25
+				},
+				"LICENSENO": {
+					"index":  26
+				},
+				"THREELICENSEPLATE": {
+					"index":  27
+				},
+				"KIND": {
+					"index":  28
+				},
+				"ETL_DATE": {
+					"index":  29
+				},
+				"LAST_MARKER": {
+					"index":  30
+				},
+				"MARKED_STATUS": {
+					"index":  31
+				},
+				"MARKED_TAG": {
+					"index":  32
+				},
+				"LAST_MARKED_TIME": {
+					"index":  33
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  34
+		},
+		"properties": {
+				"SRCID": {
+					"index":  35
+				},
+				"DESID": {
+					"index":  36
+				}
+
+		}
+	}
+
+    ]
+}
