@@ -1,0 +1,142 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "ACCOUNTNOMAIN",
+			"primaryKey": "ACCOUNTNOID",
+			"properties": {
+				"ACCOUNTNOID": {
+					"index":  0
+				},
+				"REGISTNO": {
+					"index":  1
+				},
+				"SUMPAID": {
+					"index":  2
+				},
+				"ACCOUNTNO": {
+					"index":  3
+				},
+				"PAYEEMOBILE": {
+					"index":  4
+				},
+				"PAYEEBANKACCOUNTNAME": {
+					"index":  5
+				},
+				"PAYEE": {
+					"index":  6
+				},
+				"PAIDMETHODCODE": {
+					"index":  7
+				},
+				"PAYEETYPE": {
+					"index":  8
+				},
+				"ETL_DATE": {
+					"index":  9
+				},
+				"KIND": {
+					"index":  10
+				},
+				"LAST_MARKER": {
+					"index":  11
+				},
+				"MARKED_STATUS": {
+					"index":  12
+				},
+				"MARKED_TAG": {
+					"index":  13
+				},
+				"LAST_MARKED_TIME": {
+					"index":  14
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "CLAIMMAIN",
+			"primaryKey": "CASEID",
+			"properties": {
+				"CASEID": {
+					"index":  15
+				},
+				"REGISTNO": {
+					"index":  16
+				},
+				"INITDAMAGEDATE": {
+					"index":  17
+				},
+				"REPORTDATE": {
+					"index":  18
+				},
+				"OPENDATE": {
+					"index":  19
+				},
+				"ENDCASEDATE": {
+					"index":  20
+				},
+				"ACCEPTDATE": {
+					"index":  21
+				},
+				"SUMPAID": {
+					"index":  22
+				},
+				"COMPANY": {
+					"index":  23
+				},
+				"POLICYNO": {
+					"index":  24
+				},
+				"COMPANYCODE": {
+					"index":  25
+				},
+				"PHONENUMBER": {
+					"index":  26
+				},
+				"REPORTORPHONENUMBER": {
+					"index":  27
+				},
+				"ETL_DATE": {
+					"index":  28
+				},
+				"DAMAGEADDRESS": {
+					"index":  29
+				},
+				"LAST_MARKER": {
+					"index":  30
+				},
+				"MARKED_STATUS": {
+					"index":  31
+				},
+				"MARKED_TAG": {
+					"index":  32
+				},
+				"LAST_MARKED_TIME": {
+					"index":  33
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  34
+		},
+		"properties": {
+				"SRCID": {
+					"index":  35
+				},
+				"DESID": {
+					"index":  36
+				}
+
+		}
+	}
+
+    ]
+}
