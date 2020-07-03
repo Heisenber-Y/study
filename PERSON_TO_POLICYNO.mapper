@@ -1,0 +1,121 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "PERSONMAIN",
+			"primaryKey": "PERSONID",
+			"properties": {
+				"PERSONID": {
+					"index":  0
+				},
+				"POLICYNO": {
+					"index":  1
+				},
+				"USERNAME": {
+					"index":  2
+				},
+				"IDENTIFYTYPE": {
+					"index":  3
+				},
+				"IDENTIFYNUMBER": {
+					"index":  4
+				},
+				"TEL": {
+					"index":  5
+				},
+				"KIND": {
+					"index":  6
+				},
+				"ETL_DATE": {
+					"index":  7
+				},
+				"LAST_MARKER": {
+					"index":  8
+				},
+				"MARKED_STATUS": {
+					"index":  9
+				},
+				"MARKED_TAG": {
+					"index":  10
+				},
+				"LAST_MARKED_TIME": {
+					"index":  11
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "POLICYNOMAIN",
+			"primaryKey": "POLICYNOID",
+			"properties": {
+				"POLICYNOID": {
+					"index":  12
+				},
+				"POLICYNO": {
+					"index":  13
+				},
+				"RISKCODE": {
+					"index":  14
+				},
+				"STARTDATE": {
+					"index":  15
+				},
+				"ENDDATE": {
+					"index":  16
+				},
+				"ACCEPTDATE": {
+					"index":  17
+				},
+				"PRODUCTCODE": {
+					"index":  18
+				},
+				"RISKCNAME": {
+					"index":  19
+				},
+				"KIND": {
+					"index":  20
+				},
+				"INSUREDTYPE": {
+					"index":  21
+				},
+				"ETL_DATE": {
+					"index":  22
+				},
+				"LAST_MARKER": {
+					"index":  23
+				},
+				"MARKED_STATUS": {
+					"index":  24
+				},
+				"MARKED_TAG": {
+					"index":  25
+				},
+				"LAST_MARKED_TIME": {
+					"index":  26
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  27
+		},
+		"properties": {
+				"SRCID": {
+					"index":  28
+				},
+				"DESID": {
+					"index":  29
+				}
+
+		}
+	}
+
+    ]
+}
