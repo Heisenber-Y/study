@@ -1,0 +1,121 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "ACCOUNTNOMAIN",
+			"primaryKey": "ACCOUNTNOID",
+			"properties": {
+				"ACCOUNTNOID": {
+					"index":  0
+				},
+				"REGISTNO": {
+					"index":  1
+				},
+				"SUMPAID": {
+					"index":  2
+				},
+				"ACCOUNTNO": {
+					"index":  3
+				},
+				"PAYEEMOBILE": {
+					"index":  4
+				},
+				"PAYEEBANKACCOUNTNAME": {
+					"index":  5
+				},
+				"PAYEE": {
+					"index":  6
+				},
+				"PAIDMETHODCODE": {
+					"index":  7
+				},
+				"PAYEETYPE": {
+					"index":  8
+				},
+				"ETL_DATE": {
+					"index":  9
+				},
+				"KIND": {
+					"index":  10
+				},
+				"LAST_MARKER": {
+					"index":  11
+				},
+				"MARKED_STATUS": {
+					"index":  12
+				},
+				"MARKED_TAG": {
+					"index":  13
+				},
+				"LAST_MARKED_TIME": {
+					"index":  14
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "PERSONMAIN",
+			"primaryKey": "PERSONID",
+			"properties": {
+				"PERSONID": {
+					"index":  15
+				},
+				"POLICYNO": {
+					"index":  16
+				},
+				"USERNAME": {
+					"index":  17
+				},
+				"IDENTIFYTYPE": {
+					"index":  18
+				},
+				"IDENTIFYNUMBER": {
+					"index":  19
+				},
+				"TEL": {
+					"index":  20
+				},
+				"KIND": {
+					"index":  21
+				},
+				"ETL_DATE": {
+					"index":  22
+				},
+				"LAST_MARKER": {
+					"index":  23
+				},
+				"MARKED_STATUS": {
+					"index":  24
+				},
+				"MARKED_TAG": {
+					"index":  25
+				},
+				"LAST_MARKED_TIME": {
+					"index":  26
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  27
+		},
+		"properties": {
+				"SRCID": {
+					"index":  28
+				},
+				"DESID": {
+					"index":  29
+				}
+
+		}
+	}
+
+    ]
+}
