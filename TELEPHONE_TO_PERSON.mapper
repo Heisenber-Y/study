@@ -1,0 +1,94 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "PERSONMAIN",
+			"primaryKey": "PERSONID",
+			"properties": {
+				"PERSONID": {
+					"index":  0
+				},
+				"POLICYNO": {
+					"index":  1
+				},
+				"USERNAME": {
+					"index":  2
+				},
+				"IDENTIFYTYPE": {
+					"index":  3
+				},
+				"IDENTIFYNUMBER": {
+					"index":  4
+				},
+				"TEL": {
+					"index":  5
+				},
+				"KIND": {
+					"index":  6
+				},
+				"ETL_DATE": {
+					"index":  7
+				},
+				"LAST_MARKER": {
+					"index":  8
+				},
+				"MARKED_STATUS": {
+					"index":  9
+				},
+				"MARKED_TAG": {
+					"index":  10
+				},
+				"LAST_MARKED_TIME": {
+					"index":  11
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "TELEPHONEMAIN",
+			"primaryKey": "TELEPHONEID",
+			"properties": {
+				"TELEPHONEID": {
+					"index":  12
+				},
+				"TELEPHONE": {
+					"index":  13
+				},
+				"LAST_MARKER": {
+					"index":  14
+				},
+				"MARKED_STATUS": {
+					"index":  15
+				},
+				"MARKED_TAG": {
+					"index":  16
+				},
+				"LAST_MARKED_TIME": {
+					"index":  17
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  18
+		},
+		"properties": {
+				"SRCID": {
+					"index":  19
+				},
+				"DESID": {
+					"index":  20
+				}
+
+		}
+	}
+
+    ]
+}
