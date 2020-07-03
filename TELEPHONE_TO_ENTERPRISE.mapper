@@ -1,0 +1,100 @@
+{
+    "entities": {
+		"entity1": {
+			"conceptIRI": "ENTERPRISEMAIN",
+			"primaryKey": "ENTERPRISEID",
+			"properties": {
+				"ENTERPRISEID": {
+					"index":  0
+				},
+				"REGISTNO": {
+					"index":  1
+				},
+				"ENTERPRISE_KIND_NAME": {
+					"index":  2
+				},
+				"ENTERPRISE_NAME": {
+					"index":  3
+				},
+				"ENTERPRISE_KIND_CODE": {
+					"index":  4
+				},
+				"ENTERPRISE_CODE": {
+					"index":  5
+				},
+				"ENTERPRISE_LEVEL": {
+					"index":  6
+				},
+				"PHONE": {
+					"index":  7
+				},
+				"KIND": {
+					"index":  8
+				},
+				"ETL_DATE": {
+					"index":  9
+				},
+				"LAST_MARKER": {
+					"index":  10
+				},
+				"MARKED_STATUS": {
+					"index":  11
+				},
+				"MARKED_TAG": {
+					"index":  12
+				},
+				"LAST_MARKED_TIME": {
+					"index":  13
+				}
+
+			}
+		},
+		"entity2": {
+			"conceptIRI": "TELEPHONEMAIN",
+			"primaryKey": "TELEPHONEID",
+			"properties": {
+				"TELEPHONEID": {
+					"index":  14
+				},
+				"PHONE": {
+					"index":  15
+				},
+				"LAST_MARKER": {
+					"index":  16
+				},
+				"MARKED_STATUS": {
+					"index":  17
+				},
+				"MARKED_TAG": {
+					"index":  18
+				},
+				"LAST_MARKED_TIME": {
+					"index":  19
+				}
+
+			}
+		}
+
+    },
+    "relationships": [
+	{
+		"source": "entity1",
+		"target": "entity2",
+		"unique": true,
+		"labelType": "columnLookup",
+		"labelColumn": {
+		"index":  20
+		},
+		"properties": {
+				"SRCID": {
+					"index":  21
+				},
+				"DESID": {
+					"index":  22
+				}
+
+		}
+	}
+
+    ]
+}
