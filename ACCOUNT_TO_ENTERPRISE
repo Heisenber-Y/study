@@ -1,0 +1,55 @@
+
+from faker import Faker
+f=Faker(locale='zh_CN')
+#GCADJUSTMENTFEE	赔付金额汇总表
+import csv
+import numpy as np
+import random
+list = []
+for i in range(0,200):
+       a=(
+           #entity 1
+           f.random_int(min=6001,max=6999),#index 0
+           f.random_int(min=600001,max=699999),
+           f.pyfloat(left_digits=4,right_digits=2 ,positive=True),
+           f.random_int(min=60000001,max=69999999),
+           f.random.choice(['华为','iphone','小米','荣耀','锤子','三星','oppo','vivo','LG']),
+           f.credit_card_provider(),
+           f.name(),#index6
+           f.random_digit(),#0-9的整数
+           f.random.choice(['支付宝','微信','银行卡']),
+           f.date_time(),#ETL_DATE
+           f.pystr(),
+           f.name(),
+           "备注",
+           '无',
+           f.date_time(),
+           
+           #entity 2
+           f.random_int(min=1001,max=1999),#index 15
+           f.random_int(min=10000001,max=19999999),
+           f.company_suffix(),#公司性质
+           f.company_prefix(),#公司名称
+           f.random_int(),
+           f.pystr(),
+           f.random.choice(['大','中','小']),
+           f.phone_number(),
+           f.pystr(),
+           f.date_time(),#ETL_DATE
+           f.name(),#LAST_MARKER
+           "备注",#MARKED_STATUS
+           '无',#MARKED_TAG
+           f.date_time(),
+           
+           #relationships
+           'ACCOUNT_OF_ENTERPRISE_OWN',
+           f.pystr(),
+           f.pystr(),
+          
+         )
+       list.append(a)
+b=np.array(list)
+print(b[0])
+with open('account to enterprise.csv', 'w', encoding='utf-8', newline='') as ff:
+    writer = csv.writer(ff)
+    writer.writerows(b)        
