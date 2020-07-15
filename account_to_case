@@ -1,0 +1,60 @@
+
+from faker import Faker
+f=Faker(locale='zh_CN')
+#GCADJUSTMENTFEE	赔付金额汇总表
+import csv
+import numpy as np
+import random
+list = []
+for i in range(0,200):
+       a=(
+           #entity 1:
+           f.random_int(min=60001,max=69999),#account ID
+           f.random_int(min=600001,max=699999),
+           f.pyfloat(left_digits=4,right_digits=2 ,positive=True),
+           f.random_int(min=60000001,max=69999999),
+           f.random.choice(['华为','iphone','小米','荣耀','锤子','三星','oppo','vivo','LG']),
+           f.credit_card_provider(),
+           f.name(),#index6
+           f.credit_card_security_code(),#0-9的整数
+           f.random.choice(['支付宝','微信','银行卡']),
+           f.date_time(),
+           f.pystr(),
+           f.name(),
+           "备注",
+           '无',
+           f.date_time(),
+           
+           #entity 2
+           f.random_int(min=2001,max=2999),#index 15
+           f.random_int(min=20000001,max=29999999),
+           f.date_time(),
+           f.date_time(),
+           f.date_time(),
+           f.date_time(),
+           f.date_time(),
+           f.pyfloat(left_digits=4,right_digits=2 ,positive=True),
+           f.company_prefix(),
+           f.random_int(min=30000001,max=39999999),
+           f.random_digit(),#0-9的整数
+           f.phone_number(),
+           f.phone_number(),
+           f.date_time(),
+           f.address(),
+           f.name(),
+           "备注",
+           '无',
+           f.date_time(),
+           
+           #relationships
+           f.random.choice(['INSURED_ACCOUNTNO_CLAIMMAIN','THIRD_PARTY_ACCOUNTNO_CLAIMMAIN','ACCOUNT_OF_POLICY_PAY']),
+           f.pystr(),
+           f.pystr(),
+          
+         )
+       list.append(a)
+b=np.array(list)
+print(b[0])
+with open('account to case.csv', 'w', encoding='utf-8', newline='') as ff:
+    writer = csv.writer(ff)
+    writer.writerows(b)        
