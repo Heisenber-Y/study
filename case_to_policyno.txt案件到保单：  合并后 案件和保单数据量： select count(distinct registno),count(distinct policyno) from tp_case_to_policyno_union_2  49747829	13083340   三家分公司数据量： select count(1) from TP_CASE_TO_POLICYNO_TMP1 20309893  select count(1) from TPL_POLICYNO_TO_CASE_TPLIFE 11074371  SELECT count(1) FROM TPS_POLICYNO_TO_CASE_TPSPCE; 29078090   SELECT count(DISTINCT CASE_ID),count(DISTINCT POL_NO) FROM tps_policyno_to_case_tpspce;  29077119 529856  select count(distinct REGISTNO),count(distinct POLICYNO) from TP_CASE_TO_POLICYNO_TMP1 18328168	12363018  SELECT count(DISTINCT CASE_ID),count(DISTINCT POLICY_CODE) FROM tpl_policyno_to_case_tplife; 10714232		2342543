@@ -1,0 +1,27 @@
+案件到保单：
+
+合并后 案件和保单数据量：
+select count(distinct registno),count(distinct policyno) from tp_case_to_policyno_union_2
+ 49747829	13083340
+
+
+三家分公司数据量：
+select count(1) from TP_CASE_TO_POLICYNO_TMP1
+20309893
+
+select count(1) from TPL_POLICYNO_TO_CASE_TPLIFE
+11074371
+
+SELECT count(1) FROM TPS_POLICYNO_TO_CASE_TPSPCE;
+29078090
+
+
+SELECT count(DISTINCT CASE_ID),count(DISTINCT POL_NO) FROM tps_policyno_to_case_tpspce;
+
+29077119 529856
+
+select count(distinct REGISTNO),count(distinct POLICYNO) from TP_CASE_TO_POLICYNO_TMP1
+18328168	12363018
+
+SELECT count(DISTINCT CASE_ID),count(DISTINCT POLICY_CODE) FROM tpl_policyno_to_case_tplife;
+10714232		2342543
