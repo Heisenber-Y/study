@@ -1,3 +1,110 @@
+保单到人的边关系统计结果：
+
+SELECT count(1) FROM tp_person_to_policyno_tmp6;
+--292871706
+308904388
+
+SELECT count(1) FROM tps_TP_PERSON_TO_POLICYNO_TPSPCE;
+--246114750
+
+218531038
+
+SELECT count(1) FROM tpl_PERSON_ENTITY_TPLIFE;
+--285330729
+
+285330729
+
+
+
+太财：
+保单数据量： 102324009   --102324009		
+
+人实体数据量：38444219	 -- 38441052		
+
+边关系对应的数据量
+select relationship,count(1) from tp_person_to_policyno_tmp6  group by relationship
+
+	relationship	_c1
+--	INSURE_OF_POLICYNO(被保人)	79626090
+--	BENE_OF_POLICYNO(收益人)	20103550
+--	APPLI_OF_POLICYNO(投保人)	102323973
+--	BUS_OF_POLICYNO	(业务员)	90818093
+
+1	BUS_OF_POLICYNO		业务员	90818093
+2	DES_OF_POLICYNO		定损员		4529137
+3	CHECHKER_OF_POLICYNO	查勘员	11503545
+4	INSURE_OF_POLICYNO	被保人		79626090
+5	APPLI_OF_POLICYNO	投保人		102323973
+6	BENE_OF_POLICYNO	收益人		20103550
+
+
+
+
+
+太寿：
+保单数据量：  112272568  --112272568     
+
+人实体数据量：   42859938  --42859938   
+
+
+select relationship,count(1) from tpl_PERSON_ENTITY_TPLIFE  group by relationship
+
+	relationship	_c1
+1	INSURE_OF_POLICYNO(被保人)	51068019
+2	APPLI_OF_POLICYNO(投保人)	105608101
+3	BENE_OF_POLICYNO(收益人)	75474053
+4	BUS_OF_POLICYNO(业务员) 	53180556
+
+太养：
+保单数据量：	103864608		 --103864603
+
+人实体数据量： 	61285138		--90591350
+
+select relationship,count(1) from tps_TP_PERSON_TO_POLICYNO_TPSPCE  group by relationship
+
+	relationship	_c1
+--1	INSURE_OF_POLICYNO(被保人)	2839193
+--2	BENE_OF_POLICYNO(收益人)	2547765
+--3	APPLI_OF_POLICYNO(投保人)	136860877
+--4	BUS_OF_POLICYNO(业务员) 	103866915
+
+
+1	BENE_OF_POLICYNO		5128514
+2	BUS_OF_POLICYNO			103864603
+3	APPLI_OF_POLICYNO		103864603
+4	INSURE_OF_POLICYNO		5673318
+
+
+
+
+人到保单的边关系统计 三家分公司合计：
+SELECT relationship,count(1)  from TP_PERSON_TO_POLICYNO_UNION_2 GROUP BY relationship 
+
+--1	INSURE_OF_POLICYNO(被保人)	133533302
+--2	BENE_OF_POLICYNO(收益人)	98125368
+--3	BUS_OF_POLICYNO(业务员) 	247865564
+--4	APPLI_OF_POLICYNO(投保人)	344792951
+
+1	CHECHKER_OF_POLICYNO	11503545
+2	INSURE_OF_POLICYNO	136367427
+3	DES_OF_POLICYNO	4529137
+4	BENE_OF_POLICYNO	100706117
+5	BUS_OF_POLICYNO	247863252
+6	APPLI_OF_POLICYNO	311796677
+
+
+
+
+
+合并后总实体数据量：
+保单数据量： 318461178
+人数据量：   154276527
+
+
+
+
+
+-----------
 案件到保单：
 
 合并后 案件和保单数据量：
@@ -13,7 +120,10 @@ select count(1) from TPL_POLICYNO_TO_CASE_TPLIFE
 11074371
 
 SELECT count(1) FROM TPS_POLICYNO_TO_CASE_TPSPCE;
-29078090
+29078090 
+
+
+--13285795
 
 
 SELECT count(DISTINCT CASE_ID),count(DISTINCT POL_NO) FROM tps_policyno_to_case_tpspce;
@@ -25,3 +135,12 @@ select count(distinct REGISTNO),count(distinct POLICYNO) from TP_CASE_TO_POLICYN
 
 SELECT count(DISTINCT CASE_ID),count(DISTINCT POLICY_CODE) FROM tpl_policyno_to_case_tplife;
 10714232		2342543
+
+
+select count(1) from TP_CASE_TO_POLICYNO_TMP1
+
+
+
+
+
+
