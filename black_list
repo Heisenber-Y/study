@@ -1,0 +1,24 @@
+太财	
+GSCLIENTBLACKLIST	客户产品黑名单信息
+gcmidriskscore    太财理赔中间库风险因子分值信息
+gcinvestfeemain  太财批量调查费用信息
+gcbatchinvestprocess   太财批量调查过程主表信息
+养老团险	
+GP_AML_BLK_COMPANY	反洗钱团体客户黑名单
+GP_AML_BLK_COMPANY_ALIAS	反洗钱团体客户黑名单别名表
+GP_AML_BLK_COMPANY_ALIAS_DEL	反洗钱团体客户黑名单别名删除表
+GP_AML_BLK_COMPANY_DEL	反洗钱团体客户黑名单删除表
+GP_AML_BLK_CUST	反洗钱个人客户黑名单
+GP_AML_BLK_CUST_CATEGORY	黑名单类型基表
+GP_AML_BLK_CUST_CLASS	黑名单类别基表
+GP_AML_BLK_CUST_DEL	反洗钱个人客户黑名单删除表
+GP_AML_BLK_POL	团险反洗钱黑名单暂停保单分单表
+GP_FND_BLK_NAME	黑名单配置表
+
+养老职域	
+T_AGENT_BLACK_STATUS	黑名单状态表
+T_TERRORIST_LIST	恐怖分子名单表
+T_TERRORIST_PERSON_TYPE	人员黑名单名单类型表
+
+太寿	
+T_BLACKLIST_CAUSE	客户黑名单原因代码表
