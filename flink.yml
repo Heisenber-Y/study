@@ -1,0 +1,168 @@
+akka.ask.timeout: 10 s
+akka.client-socket-worker-pool.pool-size-factor: 1.0
+akka.client-socket-worker-pool.pool-size-max: 2
+akka.client-socket-worker-pool.pool-size-min: 1
+akka.client.timeout: 60 s
+akka.framesize: 10485760b
+akka.log.lifecycle.events: false
+akka.lookup.timeout: 10 s
+akka.server-socket-worker-pool.pool-size-factor: 1.0
+akka.server-socket-worker-pool.pool-size-max: 2
+akka.server-socket-worker-pool.pool-size-min: 1
+akka.ssl.enabled: true
+akka.startup-timeout: 10 s
+akka.tcp.timeout: 20 s
+akka.throughput: 15
+akka.watch.heartbeat.interval: 10 s
+akka.watch.heartbeat.pause: 60 s
+akka.watch.threshold: 12
+blob.fetch.backlog: 1000
+blob.fetch.num-concurrent: 50
+blob.fetch.retries: 50
+blob.server.port: 32456-32520
+blob.service.ssl.enabled: true
+classloader.resolve-order: child-first
+client.rpc.port: 32651-32720
+compiler.delimited-informat.max-line-samples: 10
+compiler.delimited-informat.max-sample-len: 2097152
+compiler.delimited-informat.min-line-samples: 2
+env.java.opts.jobmanager: -Djava.security.krb5.conf=/opt/huawei/Bigdata/FusionInsight_BASE_6.5.1/1_23_KerberosClient/etc/kdc.conf
+env.java.opts.taskmanager: -Djava.security.krb5.conf=/opt/huawei/Bigdata/FusionInsight_BASE_6.5.1/1_23_KerberosClient/etc/kdc.conf
+env.java.opts: -Xloggc:<LOG_DIR>/gc.log -XX:+PrintGCDetails -XX:-OmitStackTraceInFastThrow -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=20 -XX:GCLogFileSize=20M -Djdk.tls.ephemeralDHKeySize=2048 -Djava.library.path=${HADOOP_COMMON_HOME}/lib/native
+flink.security.enable: true
+fs.output.always-create-directory: false
+fs.overwrite-files: false
+high-availability.job.delay: 10 s
+high-availability.storageDir: hdfs:///flink/recovery
+high-availability.zookeeper.client.acl: creator
+high-availability.zookeeper.client.connection-timeout: 15000
+high-availability.zookeeper.client.max-retry-attempts: 3
+high-availability.zookeeper.client.retry-wait: 5000
+high-availability.zookeeper.client.session-timeout: 60000
+high-availability.zookeeper.path.root: /flink
+high-availability.zookeeper.quorum: 10.28.158.38:24002,10.28.158.39:24002,10.28.158.40:24002
+high-availability: zookeeper
+jobmanager.heap.size: 1024mb
+jobmanager.web.403-redirect-url: https://10.28.158.45:28443/web/pages/error/403.html
+jobmanager.web.404-redirect-url: https://10.28.158.45:28443/web/pages/error/404.html
+jobmanager.web.415-redirect-url: https://10.28.158.45:28443/web/pages/error/415.html
+jobmanager.web.500-redirect-url: https://10.28.158.45:28443/web/pages/error/500.html
+jobmanager.web.access-control-allow-origin: 10.28.158.39,10.28.158.40
+jobmanager.web.accesslog.enable: true
+jobmanager.web.allow-access-address: 10.28.158.39,10.28.158.40
+jobmanager.web.backpressure.cleanup-interval: 600000
+jobmanager.web.backpressure.delay-between-samples: 50
+jobmanager.web.backpressure.num-samples: 100
+jobmanager.web.backpressure.refresh-interval: 60000
+jobmanager.web.cache-directive: no-store
+jobmanager.web.checkpoints.disable: false
+jobmanager.web.checkpoints.history: 10
+jobmanager.web.expires-time: 0
+jobmanager.web.history: 5
+jobmanager.web.logout-timer: 600000
+jobmanager.web.pragma-value: no-cache
+jobmanager.web.refresh-interval: 3000
+jobmanager.web.ssl.enabled: false
+jobmanager.web.x-frame-options: DENY
+library-cache-manager.cleanup.interval: 3600
+metrics.internal.query-service.port: 28844-28943
+nettyconnector.message.delimiter: $_
+nettyconnector.registerserver.topic.storage: /flink/nettyconnector
+nettyconnector.sinkserver.port.range: 28444-28843
+nettyconnector.ssl.enabled: false
+parallelism.default: 1
+query.client.network-threads: 0
+query.proxy.network-threads: 0
+query.proxy.ports: 32541-32560
+query.proxy.query-threads: 0
+query.server.network-threads: 0
+query.server.ports: 32521-32540
+query.server.query-threads: 0
+resourcemanager.taskmanager-timeout: 300000
+rest.await-leader-timeout: 30000
+rest.bind-port: 32261-32325
+rest.client.max-content-length: 104857600
+rest.connection-timeout: 15000
+rest.idleness-timeout: 300000
+rest.retry.delay: 3000
+rest.retry.max-attempts: 20
+rest.server.max-content-length: 104857600
+rest.server.numThreads: 4
+restart-strategy.failure-rate.delay: 10 s
+restart-strategy.failure-rate.failure-rate-interval: 60 s
+restart-strategy.failure-rate.max-failures-per-interval: 1
+restart-strategy.fixed-delay.attempts: 3
+restart-strategy.fixed-delay.delay: 10 s
+restart-strategy: none
+security.cookie: 
+security.enable: true
+security.kerberos.login.contexts: Client,KafkaClient
+security.kerberos.login.keytab: 
+security.kerberos.login.principal: 
+security.kerberos.login.use-ticket-cache: false
+security.ssl.algorithms: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
+security.ssl.enabled: true
+security.ssl.key-password: 
+security.ssl.keystore-password: 
+security.ssl.keystore: 
+security.ssl.protocol: TLSv1.2
+security.ssl.rest.enabled: false
+security.ssl.truststore-password: 
+security.ssl.truststore: 
+security.ssl.verify-hostname: false
+slot.idle.timeout: 50000
+slot.request.timeout: 300000
+state.backend.fs.checkpointdir: hdfs:///flink/checkpoints
+state.backend.fs.memory-threshold: 1024
+state.savepoints.dir: hdfs:///flink/savepoint
+task.cancellation.interval: 30000
+task.cancellation.timeout: 180000
+taskmanager.data.port: 32391-32455
+taskmanager.data.ssl.enabled: false
+taskmanager.debug.memory.logIntervalMs: 0
+taskmanager.debug.memory.startLogThread: false
+taskmanager.heap.size: 1024mb
+taskmanager.initial-registration-pause: 500 ms
+taskmanager.max-registration-pause: 30 s
+taskmanager.maxRegistrationDuration: Inf
+taskmanager.memory.fraction: 0.7
+taskmanager.memory.off-heap: false
+taskmanager.memory.preallocate: false
+taskmanager.memory.segment-size: 32768
+taskmanager.memory.size: 0
+taskmanager.network.detailed-metrics: false
+taskmanager.network.memory.buffers-per-channel: 2
+taskmanager.network.memory.floating-buffers-per-gate: 8
+taskmanager.network.memory.fraction: 0.1
+taskmanager.network.memory.max: 1gb
+taskmanager.network.memory.min: 64mb
+taskmanager.network.netty.client.connectTimeoutSec: 120
+taskmanager.network.netty.client.numThreads: 1
+taskmanager.network.netty.num-arenas: 1
+taskmanager.network.netty.sendReceiveBufferSize: 4096
+taskmanager.network.netty.server.backlog: 0
+taskmanager.network.netty.server.numThreads: 1
+taskmanager.network.netty.transport: nio
+taskmanager.network.numberOfBuffers: 2048
+taskmanager.network.request-backoff.initial: 100
+taskmanager.network.request-backoff.max: 10000
+taskmanager.numberOfTaskSlots: 1
+taskmanager.refused-registration-pause: 10 s
+taskmanager.registration.timeout: 5 min
+taskmanager.rpc.port: 32326-32390
+taskmanager.runtime.hashjoin-bloom-filters: false
+taskmanager.runtime.max-fan: 128
+taskmanager.runtime.sort-spilling-threshold: 0.8
+web.timeout: 10000
+yarn.application-attempts: 2
+yarn.application-master.port: 32586-32650
+yarn.containers.vcores: 1
+yarn.heap-cutoff-min: 384
+yarn.heap-cutoff-ratio: 0.25
+yarn.heartbeat-delay: 5
+yarn.heartbeat.container-request-interval: 500
+yarn.maximum-failed-containers: 5
+yarn.per-job-cluster.include-user-jar: ORDER
+zookeeper.sasl.disable: false
+zookeeper.sasl.login-context-name: Client
+zookeeper.sasl.service-name: zookeeper
